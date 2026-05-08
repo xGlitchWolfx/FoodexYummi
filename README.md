@@ -304,46 +304,6 @@ p {
 
 
 
-Con esto tenemos terminado el proyecto de la prueba B1
-
-
-
-**Parte 5: InstalaciÃ³n y ejecuciÃ³n**
-
-Para instalar el proyecto primero se debe clonar el repositorio y luego ejecutar:
-
-* npm install
-
-Para ejecutar en navegador:
-
-* ionic serve
-
-Para sincronizar los cambios con Android:
-
-* npx cap sync android
-
-Para ejecutar en Android:
-
-* ionic capacitor run android
-
-O tambiÃ©n se puede abrir el proyecto en Android Studio con:
-
-* npx cap open android
-
-
-
-**Parte 6: Capturas**
-
-En esta parte se deben agregar las capturas finales del proyecto:
-
-* Captura del login/register
-* Captura de la lista de recetas
-* Captura del detalle de una receta
-* Captura del perfil con foto
-* Captura de la app ejecutÃ¡ndose en Android
-
-
-
 **Parte 7: Uso de IA**
 
 Para el desarrollo del proyecto se usa IA como apoyo para revisar errores, organizar la logica del consumo del API, implementar Supabase
