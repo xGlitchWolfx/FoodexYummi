@@ -7,20 +7,11 @@ Kevin Javier Chacón
 Estudiante en software EPN
 
 
-
-**Datos generales del proyecto**
-
-Nombre del estudiante: Kevin Javier ChacÃ³n
-
-Nombre del proyecto: Foodex Yummi!
-
-Tema seleccionado: Recetas de comida
-
 API utilizada: TheMealDB
 
 Link de la API: https://www.themealdb.com/api.php
 
-TecnologÃ­as utilizadas:
+Tecnologías utilizadas:
 
 * Ionic Angular Standalone
 * Capacitor
@@ -40,11 +31,9 @@ Repositorio de GitHub:
 Primero creamos nuestro proyecto base usando:
 
 
-
 * ionic start miApp --type=angular
 * tabs
 * standalone
-
 
 
 De esta forma empezamos el proyecto ahora decidí escoger el tema de
@@ -61,7 +50,6 @@ Después en *Tabs.routes.ts* en la linea 24 implemente el código para implement
 una nueva pestaña la cual es:
 
 
-
 *{*
 
 &#x20; *path: 'tab4',*
@@ -73,11 +61,9 @@ una nueva pestaña la cual es:
 *},*
 
 
-
 Esto hace que Ionic/Angular pueda cargar la nueva tab
 
 y por ultimo en *tabs.page.html* en la linea 17 implemente:
-
 
 
 *<ion-tab-button tab="tab4" href="/tabs/tab4">*
@@ -97,7 +83,7 @@ una pestaña que sirva para ver la receta que seleccionamos
 y una ultima pestaña que sirva para editar nuestro perfil (es decir tomarnos una foto o cargar una de la galería para foto de perfil)
 
 
-<Captura para mostrar iconos>
+<img width="596" height="56" alt="Captura Iconos" src="https://github.com/user-attachments/assets/f5d89fd0-1495-44d0-85ac-71515cc39f31" />
 
 
 En esta parte decidí cambiar los iconos por 4 nuevos para que tenga mas sentido lo que estamos viendo
@@ -112,7 +98,8 @@ en todo caso decidí cambiar los iconos por los 4 vistos en la captura los cuale
 
 
 
-<Captura A2>
+<img width="958" height="954" alt="Captura A2" src="https://github.com/user-attachments/assets/ab71308a-103f-44c8-999a-06e45705f03a" />
+
 
 
 
@@ -127,7 +114,8 @@ Primero generamos un servicio nuevo creando una carpeta llamada "Services" y en 
 
 
 
-<Captura A3>
+<img width="1110" height="418" alt="Captura A3" src="https://github.com/user-attachments/assets/c1a0da42-5adc-4a9e-9590-8867b78997c7" />
+
 
 
 
@@ -145,7 +133,8 @@ una vez hecho esto solo quedaría editar nuestra pestaña 2 con los elementos qu
 lo cual quedaría de la siguiente manera:
 
 
-<Captura A4>
+<img width="714" height="888" alt="Captura A4" src="https://github.com/user-attachments/assets/dbda508e-4bd3-4a6b-a4e1-d5cb5c69d352" />
+
 
 
 
@@ -162,7 +151,7 @@ Al cargar la pantalla se realiza una búsqueda inicial de recetas con el términ
 como precaución decidí agregar una funcionalidad para que cuando alguien busque una receta que no exista aparezca un mensaje de error
 
 
-<Captura A6>
+<img width="558" height="176" alt="Captura A6" src="https://github.com/user-attachments/assets/a38c15fd-2382-43f6-bfb3-7e09142cfdfb" />
 
 
 
@@ -172,8 +161,7 @@ Entonces al seleccionar una receta esta nos hará un movimiento hacia la pestañ
 
 Esta pestaña funciona en conjunto con la pestaña 2 ya que al seleccionar una receta de la lista de recetas aca se mostrara la receta que hemos seleccionado para poder ver mas a fondo como esta se hace en si misma es decir los detalles para esto se consume el endpoint `lookup.php?i=` de TheMealDB para obtener la información completa de esa receta.
 
-<Captura A5>
-
+<img width="554" height="877" alt="Captura A5" src="https://github.com/user-attachments/assets/80ea7511-4c87-4a04-8c9e-8937b854e1b6" />
 
 
 Se vería de esta manera para que la foto se vea centrada y circular decidí usar *tab3.page.scss* para darle el diseño que busco el cual fue hacer que se vea circular y centrado 
@@ -205,9 +193,7 @@ usando esto podemos registrarnos en la app y asi podremos usarla ya que la app n
 aquí como se vería esta pestaña de Login/Register
 
 
-
-<Captura B1>
-
+<img width="536" height="798" alt="Captura B1" src="https://github.com/user-attachments/assets/5a52ef03-6828-4420-a2cd-fef59bfe47de" />
 
 
 Mientras mantengamos la sesión abierta la pestaña de login/register se ocultara temporalmente por ahora Perfil solo funciona para esto pero en breve agregaremos las funcionalidades de cámara y etc 
@@ -314,7 +300,8 @@ p {
 
 
 
-<Captura B3>
+<img width="503" height="878" alt="B3" src="https://github.com/user-attachments/assets/ef3e3a09-c8b0-45de-9a41-a1d3162e795c" />
+
 
 
 Con esto tenemos terminado el proyecto de la prueba B1
@@ -359,17 +346,13 @@ En esta parte se deben agregar las capturas finales del proyecto:
 
 **Parte 7: Uso de IA**
 
-Para el desarrollo del proyecto se usÃ³ IA como apoyo para revisar errores, organizar la lÃ³gica del consumo del API, implementar Supabase, trabajar con la cÃ¡mara de Capacitor y redactar partes del informe.
+Para el desarrollo del proyecto se usa IA como apoyo para revisar errores, organizar la logica del consumo del API, implementar Supabase
 
 Prompts usados:
 
 * Ayuda para consumir el API de TheMealDB en Ionic Angular.
-* Ayuda para mostrar recetas en una pestaÃ±a y el detalle en otra.
+* Ayuda para mostrar las recetas en formato de galeria.
 * Ayuda para implementar login y registro con Supabase.
-* Ayuda para bloquear pestaÃ±as si el usuario no ha iniciado sesiÃ³n.
-* Ayuda para usar la cÃ¡mara y guardar la foto localmente.
-* Ayuda para personalizar el icono y nombre de la app.
+* Ayuda para bloquear pestañas si el usuario no ha iniciado sesion.
 
-No se colocaron claves secretas en el repositorio. Solo se usa la clave pÃºblica necesaria para el cliente de Supabase.
-
-
+No se colocaron claves secretas en el repositorio.
