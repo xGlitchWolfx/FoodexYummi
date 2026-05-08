@@ -1,0 +1,22 @@
+ion-card {
+  max-width: 420px;
+  margin: 24px auto;
+}
+
+ion-card-content {
+  display: grid;
+  gap: 16px;
+}
+
+.foto-perfil {
+  width: 256px;
+  height: 256px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}

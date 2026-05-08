@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="estado" *ngIf="!recetaSeleccionada && !cargando">
+    <ion-text color="medium">
+      <p>Selecciona una receta desde la pestana Recetas para ver su detalle.</p>
+    </ion-text>
+  </div>
+
+  <div class="estado" *ngIf="cargando">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando detalle...</p>
+  </div>
+
+  <ion-text color="medium" *ngIf="!cargando && mensajeError">
+    <p class="mensaje">{{ mensajeError }}</p>
+  </ion-text>
+
+  <ion-card *ngIf="!cargando && receta">
+    <ion-img class="receta-imagen" [src]="receta.strMealThumb"></ion-img>
+
+    <ion-card-header>
+      <ion-card-title>{{ receta.strMeal }}</ion-card-title>
+      <ion-card-subtitle>
+        {{ receta.strCategory }} - {{ receta.strArea }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Ingredientes</h2>
+
+      <ion-list>
+        <ion-item *ngFor="let ingrediente of obtenerIngredientes()">
+          <ion-label>{{ ingrediente }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <h2>Preparacion</h2>
+      <p class="instrucciones">{{ receta.strInstructions }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

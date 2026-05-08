@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Autenticacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="auth-form">
+    <h1>{{ modo === 'login' ? 'Iniciar sesion' : 'Crear cuenta' }}</h1>
+
+    <ion-segment [(ngModel)]="modo">
+      <ion-segment-button value="login">
+        Login
+      </ion-segment-button>
+      <ion-segment-button value="registro">
+        Registro
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-item>
+      <ion-input
+        label="Correo"
+        labelPlacement="floating"
+        type="email"
+        [(ngModel)]="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Contrasena"
+        labelPlacement="floating"
+        type="password"
+        [(ngModel)]="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="enviarFormulario()" [disabled]="cargando">
+      {{ cargando ? 'Procesando...' : modo === 'login' ? 'Ingresar' : 'Registrarse' }}
+    </ion-button>
+
+    <ion-text [color]="esError ? 'danger' : 'success'" *ngIf="mensaje">
+      <p>{{ mensaje }}</p>
+    </ion-text>
+
+    <ion-text color="medium" *ngIf="!autenticado">
+      <p>Inicia sesion para conocer ricas y deliciosas recetas</p>
+    </ion-text>
+  </div>
+</ion-content>

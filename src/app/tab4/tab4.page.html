@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cuenta</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img
+        class="foto-perfil"
+        [src]="fotoPerfil || 'assets/icon/favicon.png'"
+        alt="Foto de perfil"
+      />
+
+      <p class="correo">{{ email }}</p>
+
+      <ion-button expand="block" (click)="mostrarOpcionesFoto = true">
+        Cambiar foto
+      </ion-button>
+
+      <ion-button expand="block" color="danger" (click)="cerrarSesion()">
+        Cerrar sesion
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-action-sheet
+    [isOpen]="mostrarOpcionesFoto"
+    header="Cambiar foto"
+    [buttons]="opcionesFoto"
+    (didDismiss)="mostrarOpcionesFoto = false"
+  ></ion-action-sheet>
+</ion-content>

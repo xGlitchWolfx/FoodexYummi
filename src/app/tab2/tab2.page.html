@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recetas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    placeholder="Buscar receta"
+    [value]="terminoBusqueda"
+    (ionChange)="buscarRecetas($any($event.target).value)"
+  ></ion-searchbar>
+
+  <div class="estado" *ngIf="cargando">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando recetas...</p>
+  </div>
+
+  <ion-text color="medium" *ngIf="!cargando && mensajeError">
+    <p class="mensaje">{{ mensajeError }}</p>
+  </ion-text>
+
+  <div class="galeria-recetas" *ngIf="!cargando && recetas.length > 0">
+    <ion-card
+      *ngFor="let receta of recetas"
+      (click)="seleccionarReceta(receta)"
+      button="true"
+    >
+      <ion-img [src]="receta.strMealThumb"></ion-img>
+
+      <ion-card-header>
+        <ion-card-title>{{ receta.strMeal }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
