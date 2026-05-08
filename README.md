@@ -304,7 +304,7 @@ p {
 
 
 
-**Parte 7: Uso de IA**
+**Uso de la IA de manera Etica**
 
 Para el desarrollo del proyecto se usa IA como apoyo para revisar errores, organizar la logica del consumo del API, implementar Supabase
 
